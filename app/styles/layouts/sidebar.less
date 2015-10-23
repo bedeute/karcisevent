@@ -1,0 +1,14 @@
+.sidebar{
+	background-color: @ebony-clay;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: @sidebar-width;
+
+	&.reveal {
+
+		+ .main-content {
+			margin-left: @sidebar-width;
+		}
+	}
+}

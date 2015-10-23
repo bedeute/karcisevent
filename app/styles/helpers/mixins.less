@@ -1,0 +1,99 @@
+//
+// Text indent
+//
+
+.text-indent(@value: -9999px, @font-size: 1px, @line-height: 1) {
+  font-size: @font-size;
+  line-height: @line-height;
+  text-indent: @value;
+}
+
+
+//
+// Placeholder
+//
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &:-moz-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+
+//
+// Display
+//
+
+.inline-block() {
+  display: inline-block;
+
+  .lt-ie8 & when (@is-oldie) {
+    display: inline;
+    zoom: 1;
+  }
+}
+
+
+//
+// Min height / width
+//
+
+.min-height(@height) {
+  .lt-ie8 & when (@is-oldie) {
+    height: auto !important;
+    height: @height;
+  }
+
+  min-height: @height;
+}
+
+.min-width(@width) {
+  .lt-ie8 & when (@is-oldie) {
+    width: auto !important;
+    width: @width;
+  }
+
+  min-width: @width;
+}
+
+//
+// Breakpoint
+//
+
+.breakpoint(@breakpoint, @content) {
+  & when (@is-responsive) {
+    & when (@breakpoint = sm) {
+      @media (min-width: @screen-sm-min) {
+        @content();
+      }
+    }
+
+    & when (@breakpoint = md) {
+      @media (min-width: @screen-md-min) {
+        @content();
+      }
+    }
+
+    & when (@breakpoint = lg) {
+      @media (min-width: @screen-lg-min) {
+        @content();
+      }
+    }
+  }
+
+  & when not (@is-responsive) and (@breakpoint = md) {
+    @content();
+  }
+}

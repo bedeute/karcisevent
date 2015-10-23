@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "master": {
+      "title": "Karcisevent :: Master",
+      "description": "Awesome project.",
+      "keywords": "html5, css3, Karcisevent"
+    },
+
+    "index": {
+      "title": "Karcisevent :: Home",
+      "description": "Awesome project.",
+      "keywords": "html5, css3, Karcisevent"
+    },
+
+
+    "dashboard": {
+      "title": "Karcisevent :: Admin | Dashboard",
+      "description": "Awesome project.",
+      "keywords": "html5, css3, Karcisevent"
+    }
+  }
+}

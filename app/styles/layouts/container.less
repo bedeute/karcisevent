@@ -1,0 +1,17 @@
+.layout-container {
+  &:extend(.clearfix all);
+
+  margin: 0 auto;
+  padding: 0 @container-padding;
+  .breakpoint(sm, {
+    width: @container-sm-width;
+  });
+
+  .breakpoint(md, {
+    width: @container-md-width;
+  });
+
+  .breakpoint(lg, {
+    width: @container-lg-width;
+  });
+}

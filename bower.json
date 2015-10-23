@@ -1,0 +1,21 @@
+{
+  "name": "karcisevent",
+  "version": "0.0.1",
+  "authors": [
+    "bedeute <bedeute@gmail.com>"
+  ],
+  "description": "Awesome project.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.x"
+  },
+  "overrides": {
+  }
+}
