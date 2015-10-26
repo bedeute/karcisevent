@@ -33,10 +33,14 @@ opts.src = {
     ],
     app: [
       'bower_components/jquery/dist/jquery.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
       'app/scripts/app.js'
     ]
   },
-  fonts: 'app/fonts/**/*.*',
+  fonts: [
+      'app/fonts/**/*.*',
+      'bower_components/font-awesome/fonts/**/*.*',
+    ],
   images: ['app/images/**/*.*', '!app/images/sprite/*.*'],
   sprite: 'app/images/sprite/*.png',
   clean: ['dist', '.tmp'],

@@ -14,8 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "3.x"
+    "bootstrap": "3.x",
+    "font-awesome": "fontawesome#~4.4.0"
   },
-  "overrides": {
-  }
+  "overrides": {}
 }

@@ -26,6 +26,7 @@
 
   <!-- @if NODE_ENV == 'DEVELOPMENT' -->
   <link rel="stylesheet" href="styles/app.css">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!--head:js-->
   <!--/head:js-->
   <!-- @endif -->

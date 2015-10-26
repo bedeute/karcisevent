@@ -15,4 +15,10 @@ body {
   /* Set the fixed height of the footer here */
   height: @dashboard-footer-height;
   background-color: #f5f5f5;
+
+  &.narrowed {
+    left: @sidebar-width;
+    width: auto;
+    right: 0;
+  }
 }
