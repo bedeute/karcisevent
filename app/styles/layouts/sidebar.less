@@ -5,16 +5,106 @@
 	left: 0;
 	width: @sidebar-width;
 	height: 100%;
+	z-index: 11;
 	.box-shadow(0 0 10px 1px rgba(0, 0, 0, 0.08));
 
 
 	&.reveal {
+		.transition(width 0.16s ease-in-out);
 
 		+ .main-content {
 			margin-left: @sidebar-width;
 		}
 	}
 
+	&.shrink {
+		width: @sidebar-width-shrink;
+		.transition(width 0.16s ease-in-out);
+
+		> .sidebar-dashboard-header {
+
+			> .btn-header-dashboard {
+				.transition(all 0.16s ease-in-out);
+
+				&, &:focus{
+					right: auto;
+					left: 52px;
+					color: @sidebar-bg-color;
+					.box-shadow(none);
+					border-color: transparent;
+					background-color: inherit;
+					border-radius: 2px;
+				}
+
+				&:hover{
+					background-color: #e5e5e5;
+				}
+			}
+
+			> .navbar-brand {
+				> span {
+					display: none;
+				}
+			}
+		}
+
+		> .sidebar-nav {
+
+			> li {
+				position: relative;
+				> a {
+					> i {
+						vertical-align: middle;
+						font-size: 20px;
+						margin-left: 1px;
+					}
+					> span {
+						display: none;
+						vertical-align: middle;
+						position: absolute;
+						top: 0;
+						padding:11px 15px;
+						left: 52px;
+						background-color: @sidebar-bg-color;
+					}
+
+					&:hover {
+						> span {	
+							.transition(all 0.4s ease-in-out);
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		+ .main-content {
+			margin-left: @sidebar-width-shrink;
+		}
+	}
+
+}
+
+.btn-header-dashboard {
+	.transition(all 0.16s ease-in-out);
+
+	&, &:focus {
+		position: absolute;
+		right: -24px;
+		color: #fff;
+		top: 1px;
+		border: 1px solid #fff;
+		display: inline-block;
+		border-radius: 20px;
+		padding: 4px 9px;
+		background-color: @brand-inverse;
+		.box-shadow(0 0 4px rgba(0, 0, 0, 0.16));
+	}
+
+	&:hover{
+		background-color: #fff;
+		color: @brand-inverse;
+	}
 }
 
 .sidebar-nav {
@@ -26,7 +116,12 @@
 		&.active > a:focus {
 			background-color: darken(spin(@sidebar-bg-color, -5), 2%);
 			cursor: default;
-			border-left: 3px solid lighten(@brand-primary, 3%);
+			border-left-color: @brand-main;
+			color: #7C99B3;
+
+			> i {
+				color: #7C99B3;
+			}
 
 		}
 
@@ -39,17 +134,23 @@
 
 			> i {
 				display: inline-block;
-				padding-right: 14px;
+			}
+
+			> span {
+				padding-left: 14px;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
 			}
 
 			&:hover,
 			&:focus {
 				// background-color: darken(spin(@sidebar-bg-color, -5), 2%);
 				color: #A0B7CC;
-				// border-left: 3px solid lighten(@brand-primary, 3%);
+				border-left-color: darken(@brand-main, 15%);
 
 				> i {
-					color: @brand-primary;
+					color: @brand-main;
 				}
 			}
 		}
@@ -58,10 +159,22 @@
 
 .sidebar-dashboard-header {
 	&:extend(.clearfix all);
-	background-color: #fff;
+	position: relative;
+	// background-color: #fff;
 
 	> .navbar-brand {
-		display: inline-block;
-		color: @red-monza;
+		display: block;
+		color: rgba(255, 255, 255, 0.6);
+
+		> span {
+			position: absolute;
+			top: 15px;
+			left: 46px;
+			.transition(all 1s ease-in-out);
+		}
+
+		> img {
+			.opacity(.6);
+		}
 	}
 }

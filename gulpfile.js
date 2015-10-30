@@ -34,6 +34,12 @@ opts.src = {
     app: [
       'bower_components/jquery/dist/jquery.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/chartist/dist/chartist.js',
+      'bower_components/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js',
+      'bower_components/pikaday/pikaday.js',
+      'bower_components/chosen/chosen.jquery.min.js',
+      'bower_components/bootstrap-chosen/chosen.jquery.min.js',
+      'bower_components/dropzone/dist/dropzone.js',
       'app/scripts/app.js'
     ]
   },

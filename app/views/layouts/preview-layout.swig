@@ -26,12 +26,12 @@
 
   <!-- @if NODE_ENV == 'DEVELOPMENT' -->
   <link rel="stylesheet" href="styles/app.css">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!--head:js-->
   <!--/head:js-->
   <!-- @endif -->
 
   <!-- @if NODE_ENV == 'DISTRIBUTION' -->
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/app.min.css">
   <script src="scripts/head.all.min.js"></script>
   <!-- @endif -->
@@ -41,15 +41,11 @@
   <div class="wrap">
     
     {% block header %}
-      {% include "../layouts/header-dashboard.swig" %}
+      {# {% include "../layouts/header-dashboard.swig" %} #}
     {% endblock %}
 
     {% block before-content %}{% endblock %}
 
-    {% block sidebar %}
-      {% include "../layouts/sidebar.swig" %}
-
-    {% endblock %}
 
     {% block content %}{% endblock %}
 
@@ -59,7 +55,12 @@
   </div> <!--/.wrap-->
 
   {% block footer %}
-    {% include "../layouts/footer.swig" %}
+    <footer class="pe-footer">
+      <div class="text-center container container-pe">
+        <span>Crafted with <a href="#">eventkarcis</a></span><br>
+        <span>© 2015 eventkarcis alpha team.</span>
+      </div>
+    </footer>
   {% endblock %}
 
   <!-- @if NODE_ENV == 'DEVELOPMENT' -->

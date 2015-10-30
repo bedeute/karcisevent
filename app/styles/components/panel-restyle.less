@@ -1,8 +1,89 @@
+.panel-dashboard {
+	border: 1px solid #ddd;
+	color: #fff;
+}
+
+#panel-dashboard-income {
+
+	.panel-body:last-child {
+		background-color: darken(spin(@red-aliarin, -3), 3%);
+	}
+}
+
+.pd-icon {
+	padding-right: 0;
+	padding-top: 28px;
+	padding-bottom: 28px;
+	font-size: 32px;
+	text-align: center;
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+	> i.fa {
+		line-height: 60px;
+	}
+}
+
+.pd-icon-circle {
+	border-radius: 50px;
+	padding: 12px;
+	background-color: #fff;
+	color: inherit;
+	display: inline-block;
+
+	.pd-red-aliarin & {
+		color: @red-aliarin;
+	}
+
+}
+
+.pd-body {
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+
+
+
+.pd-title {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.pd-counter {
+	font-size: 48px;
+	display: block;
+	line-height: 40px;
+}
+
+// panel dashboard coloring
+.pd-green-turquoise {
+	background-color: @green-turquoise;
+	border-color: darken(spin(@green-turquoise, -2), 5%);
+}
+
+.pd-red-aliarin {
+	background-color: @red-aliarin;
+	border-color: darken(spin(@red-aliarin, -2), 5%);
+}
+
+.pd-yellow-sandstorm {
+	background-color: @yellow-sandstorm;
+	border-color: darken(spin(@yellow-sandstorm, -2), 5%);
+}
+
+.pd-blue-picton {
+	background-color: @blue-picton;
+	border-color: darken(spin(@blue-picton, -2), 5%);
+}
+
 .panel-heading {
 	&:extend(.clearfix all);
 
 	.panel-default > & {	
 		background-color: #fff;
+	}
+
+	ul {
+		margin-bottom: 0;
 	}
 }
 

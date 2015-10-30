@@ -1,4 +1,4 @@
-<header class="header header-dashboard narrowed">
+<header class="header header-dashboard">
   <div class="header-search-wrap narrowed">
     <div class="pull-right">
       <a href="#" class="btn btn-link" id="btn-header-search-dissmiss"><i class="fa fa-times"></i></a>
@@ -12,7 +12,6 @@
   <div class="pull-left">
     <ul class="list-inline header-nav-button">
       <li><a href="event-detail.html" class="btn btn-main"><span class="visible-xs"><i class="fa fa-plus"></i>&nbsp;Event</span><span class="hidden-xs">Create Event</span></a></li>
-      <li class="hidden-xs"><a href="create-ticket.html" class="btn btn-main">Create Ticket</a></li>
     </ul>
   </div>
   

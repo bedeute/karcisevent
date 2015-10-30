@@ -11,7 +11,7 @@
 //
 
 @droid-serif-font-family:			'Droid Serif', serif;
-@pt-sans-font-family:					'PT Sans', sans-serif;;
+@pt-sans-font-family:					'PT Sans', sans-serif;
 
 
 //
@@ -29,13 +29,39 @@
 @ebony-clay:				#22313F;
 
 // Red group
-@red-monza: #CF000F;
+@red-monza:					#CF000F;
+@red-aliarin:				#F55747;
+
+// Green group
+@green-turquoise: 	#36D7B7;
+
+// Yellow group
+@yellow-sandstorm:	#F9BF3B;
+
+// Blue group
+@blue-picton:				#22A7F0;
 
 // Base colors
 @header-base-color: @ebony-clay;
 @sidebar-bg-color: @ebony-clay;
-// @brand-color: 
 
+@brand-main: @green-turquoise;
+@brand-inverse: @ebony-clay;
+
+// Button restyle
+// ----------------------------
+@link-color: @brand-main;
+
+// Button restyle
+// ----------------------------
+
+@btn-main-color:              #fff;
+@btn-main-bg:                 @brand-main;
+@btn-main-border:             darken(@btn-main-bg, 5%);
+
+@btn-inverse-color:           #fff;
+@btn-inverse-bg:              @brand-inverse;
+@btn-inverse-border:          darken(@btn-inverse-bg, 5%);
 
 
 //
@@ -48,13 +74,15 @@
 // 
 // Container Narrow
 // 
-@container-lg-narrowed:			1132px;
+@container-lg-narrowed:			1128px;
 
 // 
 // Sidebar
 // 
-@sidebar-width:				220px;
+@sidebar-width:		220px;
+@sidebar-width-shrink:	56px;
 
 // Sticky footer
 
-@dashboard-footer-height 			: 60px;
+@dashboard-footer-height 			: 40px;
+@preview-event-footer-height 	: 60px;
