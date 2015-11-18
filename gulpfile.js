@@ -39,6 +39,7 @@ opts.src = {
       'bower_components/pikaday/pikaday.js',
       'bower_components/chosen/chosen.jquery.min.js',
       'bower_components/bootstrap-chosen/chosen.jquery.min.js',
+      'bower_components/bootstrap-toggle/js/bootstrap-toggle.js',
       'bower_components/dropzone/dist/dropzone.js',
       'app/scripts/app.js'
     ]

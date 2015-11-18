@@ -18,10 +18,65 @@ body {
   background-color: #f4f4f4;
   padding:10px 20px;
   border-top: 1px solid #eaeaea;
+  text-align: center;
 
-  &.narrowed {
-    left: @sidebar-width;
-    width: auto;
-    right: 0;
+
+  @media (min-width: @screen-sm-min) {
+    &.narrowed {
+      left: @sidebar-width;
+      width: auto;
+      text-align: left;
+      right: 0;
+    }
   }
+}
+
+
+/* Frontier sticky footer styles
+-------------------------------------------------- */
+body.frontier-body {
+  /* Margin bottom by footer height */
+  margin-bottom: @frontier-footer-height;
+}
+
+.frontier-footer {
+  position: absolute;
+  background-color: #333;
+  bottom: 0;
+  color: #999;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: @frontier-footer-height;
+  padding:20px;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+
+  a {
+    color: #ccc;
+
+    &:hover,
+    &:focus {
+      color: @brand-main;
+      text-decoration: none;
+    }
+  }
+
+  hr {
+    border-top-color: #555;
+  }
+}
+
+.ff-logo {
+  .opacity(.7);
+  margin-bottom: 20px;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    .opacity(.9);
+  }
+}
+
+.ff-list-menu {
+  padding-bottom: 14px;
 }

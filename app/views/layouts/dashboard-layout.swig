@@ -31,7 +31,6 @@
   <!-- @endif -->
 
   <!-- @if NODE_ENV == 'DISTRIBUTION' -->
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/app.min.css">
   <script src="scripts/head.all.min.js"></script>
   <!-- @endif -->

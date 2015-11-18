@@ -56,7 +56,7 @@
 										</div>
 										<div class="input-group">
 								      <span class="input-group-btn">
-								        <select class="btn btn-default">
+								        <select class="btn btn-default" style="height: 34px;">
 								        	<option>Rp.</option>
 								        	<option>$</option>
 								        </select>
@@ -78,14 +78,10 @@
 						<div class="form-group">
 							<label for="additionalOption" class="col-sm-2 control-label">Additional Option</label>
 							<div class="col-sm-9">
-								<div class="checkbox">
-								    <label>
-								      <input type="checkbox"> 
-								    </label>
-								  </div>
+					      <input type="checkbox" data-toggle="toggle" id="ct-additional-option-toggle" data-onstyle="main">
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" id="ct-additional-option-item">
 							<div class="col-sm-9 col-sm-offset-2">
 								<div class="form-group">
 									<label for="ticketDescription" class="col-sm-2 control-label">Description</label>

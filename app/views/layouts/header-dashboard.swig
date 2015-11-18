@@ -58,7 +58,7 @@
           <img src="images/dashboard/avatar-dummy.jpg" alt="Username " width="36" height="36">&nbsp;
           <i class="fa fa-caret-down"></i>
         </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCaHeaderAcct">
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownCaHeaderAcct">
           <li role="presentation">
             <a href="account.html" role="menu-item" tabindex="-1">
               <i class="fa fa-user"></i>&nbsp;&nbsp;Account</a>

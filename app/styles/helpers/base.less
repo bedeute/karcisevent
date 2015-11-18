@@ -3,6 +3,10 @@ body {
 	font-family: @pt-sans-font-family;
 }
 
+body.frontier-body {
+	background-color: #fff;
+}
+
 
 .dashboard-wrap {
 	.transition(all 0.06s ease-in-out);
@@ -11,9 +15,10 @@ body {
 
 		.container {
 
-		  @media (min-width: @screen-lg-min) {
-		    width: @container-lg-narrowed;
+		  @media (min-width: @screen-sm-min) {
+		    width: 100%;
 		  }
+
 		}
 	}
 
@@ -77,6 +82,17 @@ body {
 	}
 }
 
+
+.pd-period-wrap {
+
+	@media (min-width: @screen-sm-min) {
+		text-align: right;
+		
+		> .form-control {
+			width: 150px;
+		}
+	}
+}
 
 .pd-chart-wrap {
 	position: relative;
@@ -155,7 +171,7 @@ body {
 				padding-right: 30px;
 			}
 
-			> .pull-right {
+			.pull-right {
 				background: #f3f3f3;
 				padding: 6px 12px;
 			}
@@ -204,7 +220,7 @@ body {
 	}
 }
 
-.me-list-item {
+.me-list-item{
 	background-color: #fff;
 	border-radius: 2px;
 	margin: 4px 0;
@@ -230,4 +246,320 @@ body {
 		text-align: right;
 		
 	}
+}
+
+// order detail page
+
+.od-panel {
+
+	> .col-sm-5 {
+		border-right: 1px solid #eee;
+	}
+}
+
+.od-detail {
+padding: 12px 18px;
+margin-right: -15px;
+}
+
+.od-unique-id {
+	margin-top: 4px;
+	margin-bottom: 10px;
+	color: #ccc;
+}
+
+.od-text-group {
+
+	label.control-label {
+		padding-top: 0;
+		padding-right: 0;
+		color: #999;
+	}
+
+	.od-text-label-value {
+		color: #555;
+
+		> strong {
+			display: inline-block;
+			margin-bottom: 6px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+}
+
+.od-summary {
+	padding: 12px 18px;
+	margin-left: -15px;
+
+	table {
+		margin-bottom: 0;
+		margin-top: 6px;
+	}
+}
+
+.od-ticket-list-header {
+	background-color: #fff;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border: 1px solid #ddd;
+	.box-shadow(0 2px 3px rgba(0, 0, 0, 0.05));
+	padding: 8px 12px;
+}
+
+.od-ticket-item {
+	margin: 4px auto 6px;
+
+	&-header {
+
+		label {
+			margin-bottom: 0;
+		}
+	}
+
+	&-body {
+
+	}
+
+	&-name {
+		font-weight: bold;
+	}
+
+	&-action {
+		text-align: right;
+	}
+}
+
+
+
+
+// Frontier page style
+// ---------------------------------------
+.frontier-section {
+	padding: 40px 0 60px;
+}
+
+.frontier-heading {
+
+}
+
+.frontier-subheading {
+	font-size: 16px;
+	color: #888;
+}
+
+
+
+// landing page style
+// ---------------------------------------
+#landing-page {}
+
+.lp-cover {
+	height: 505px;
+	background-image: url(../images/crowd-watch-an-event.jpg);
+	background-size: cover;
+	position: relative;
+
+
+	&-text {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 28px;
+		text-transform: uppercase;
+		font-family: @droid-serif-font-family;
+		color: @ebony-clay;
+		position: relative;
+
+		@media (min-width: @screen-md-min) {
+			text-align: right;
+			font-size: 38px;
+			margin-top: 100px;
+		}
+	}
+
+	&-footer {
+		position: absolute;
+		padding-top: 40px;
+		padding-bottom: 50px;
+		background-color: rgba(0, 0, 0, 0.25);
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: #fff;
+
+		span {
+			font-size: 20px;
+			margin-bottom: 20px;
+			display: inline-block;
+		}
+
+		@media (min-width: @screen-lg-min) {
+
+			.form-control {
+				width: 280px;
+			}
+			.btn-inverse {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		}
+	}
+}
+
+
+.lp-section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.lp-body-heading {
+	font-family: @droid-serif-font-family;
+	color: #777;
+}
+
+.lp-body-subheading {
+	color: #999;
+	font-size: 16px;
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.lp-why-us {
+
+	.col-sm-4 {
+		color: #555;
+
+		p {
+			margin-top: 12px;
+			line-height: 24px;
+		}
+	}
+}
+
+.lp-why-us-icon {
+	width: 200px;
+}
+
+.lp-get-started {
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+	padding: 20px 0 30px;
+}
+
+
+// Pricing page style
+// ---------------------------------------
+
+#pricing-page {}
+
+.pp-free-announcement {
+	padding: 80px 0 100px;
+	background-color: lighten(@brand-main, 2%);
+	color: lighten(@brand-main, 80%);
+
+	+ .frontier-section {
+		padding-top: 60px;
+	}
+
+	h1 {
+		font-size: 52px;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-top: 20px;
+		font-size: 20px;
+		color: lighten(@brand-main, 70%);
+	}
+}
+
+.pp-pricing-list {
+	padding-top: 60px;
+	&:extend(.clearfix all);
+}
+
+.pp-pricing-item {
+	float: left;
+	text-align: center;
+	width: 25%;
+	border: 1px solid #ddd;
+	border-bottom-width: 2px;
+	border-top-width: 2px;
+
+	&:first-child {
+		border-left-width: 2px;
+	}
+
+	&:last-child {
+		border-right-width: 2px;
+	}
+
+	&-highlight {
+		border-radius: 4px;
+		border-color: @brand-main;
+		margin-top: -20px;
+    margin-left: -1px;
+    margin-right: -1px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    position: relative;
+
+		.pp-pricing-item-header {
+			border-bottom-color: darken(@brand-main, 5%);
+			background-color: @brand-main;
+			color: #fff;
+
+			> .pp-pricing-item-name > span {
+				background-color: darken(@brand-main, 5%);
+				color: #fff;
+			}
+		}
+
+		.pp-pricing-item-body > p {
+			font-size: 16px;
+			margin-bottom: 14px;
+		}
+	}
+}
+
+.pp-pricing-item-header {
+	position: relative;
+	padding: 12px 18px 22px;
+	border-bottom: 2px solid #ddd;
+}
+
+.pp-pricing-item-price {
+	font-weight: bold;
+	margin: 10px auto	4px;
+}
+
+.pp-pricing-item-name {
+	position: absolute;
+	display: inline-block;
+	bottom: -10px;
+	left: 0;
+	text-align: center;
+	right: 0;
+
+	> span {
+		border-radius: 20px;
+		text-transform: uppercase;
+		padding: 2px 18px;
+		color: #555;
+		background-color: #d9d9d9;
+	}
+}
+
+.pp-pricing-item-body {
+	padding: 30px 18px 12px;
+}
+
+.pp-pricing-item-footer {
+	padding: 4px 18px 12px;
 }

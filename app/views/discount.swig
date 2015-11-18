@@ -7,13 +7,17 @@
   <title>{{ meta.dashboard.title }}</title>
 {% endblock %}
 
+{% block before-content %}
+{% include "modal-add-discount.swig" %}
+{% endblock %}
+
 {% block content %}
 <div class="main-content dashboard-wrap">
 	<!-- breadcrumb -->
 	<div class="breadcrumb-wrap">
 		<div class="container">
 			<ol class="breadcrumb">
-			  <li><a href="#">My Events</a></li>
+			  <li><a href="my-event.html">My Events</a></li>
 			  <li class="breadcrumb-event-name"><a href="dashboard.html">Event Name</a></li>
 			  <li class="active">Discount Code</li>
 			</ol>
@@ -37,13 +41,13 @@
 					You don't have discount codes, yet.<br>
 					Let's create some...
 				</p>
-				<button type="button" class="btn btn-main">Add discount code</button>
+				<button type="button" class="btn btn-main" data-toggle="modal" data-target="#modalAddDiscount">Add discount code</button>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<div class="pull-right">
 						<ul class="list-inline">
-							<li><a href="#" class="btn btn-main btn-xs"><i class="fa fa-plus"></i>&nbsp;Add discount code</a></li>
+							<li><a class="btn btn-main btn-xs" data-toggle="modal" href="#modalAddDiscount"><i class="fa fa-plus"></i>&nbsp;Add discount code</a></li>
 							<li class="dropdown">
 							  <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="ticketFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 							    Filter
@@ -74,7 +78,7 @@
 					<tbody>
 						<tr>
 							<td>
-								<a href="#">Discount Code #1</a>
+								<a href="discount-detail.html">Discount Code #1</a>
 								<ul class="list-inline visible-xs">
 									<li>Rp.50k</li>
 									<li>10/10/2015</li>

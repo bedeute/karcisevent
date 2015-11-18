@@ -13,7 +13,7 @@
 	<div class="breadcrumb-wrap">
 		<div class="container">
 			<ol class="breadcrumb">
-			  <li><a href="#">My Events</a></li>
+			  <li><a href="my-event.html">My Events</a></li>
 			  <li class="breadcrumb-event-name"><a href="dashboard.html">Event Name</a></li>
 			  <li class="active">Settings</li>
 			</ol>
@@ -33,7 +33,7 @@
 	
 		<section id="setting-page">
 			<div class="row">
-				<div class="col-sm-4 col-sm-offset-4">
+				<div class="col-xs-12 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<span class="panel-title">Settings</span>
@@ -43,7 +43,7 @@
 							<p>In order to process credit cards, you will need to connect one or more payment options.</p>
 							<hr>
 							<!-- Nav tabs -->
-						  <ul class="nav nav-tabs nav-justified" role="tablist">
+						  <ul class="nav nav-tabs nav-justified ke-nav-tabs" role="tablist">
 						    <li role="presentation" class="active"><a href="#vertitrans" aria-controls="vertitrans" role="tab" data-toggle="tab">Vertitrans</a></li>
 						    <li role="presentation"><a href="#paypal" aria-controls="paypal" role="tab" data-toggle="tab">PayPal</a></li>
 						    <li role="presentation"><a href="#stripe" aria-controls="stripe" role="tab" data-toggle="tab">Stripe</a></li>

@@ -24,10 +24,14 @@
 		<div class="container container-pe">
 			<div class="panel panel-pe">
 				<div class="panel-body pe-body">
-					<section class="pe-address">
-						<span class="pe-address-icon"><i class="fa fa-map-marker"></i></span>
-						<a href="#"><strong>Emerald Ballroom</strong> Jl. Aspal Hitam, Agak Kelabu, No. 24, Suatu Negara</a>
+					<section class="pe-info">
+						<span class="pe-info-icon"><i class="fa fa-info"></i></span>
+						<a href="#"><i class="fa fa-map-marker"></i>&nbsp;<strong>Emerald Ballroom</strong> Jl. Aspal Hitam, Agak Kelabu, No. 24, Suatu Negara</a><br>
+						<span><i class="fa fa-clock-o"></i>&nbsp;Start from <strong>20.00</strong>&nbsp;until <strong>22.00</strong></span>
 					</section>
+					{# <section class="pe-duration">
+						<span class="pe-duration-icon"><i class="fa fa-clock-o"></i></span>
+					</section> #}
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

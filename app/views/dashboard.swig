@@ -13,7 +13,7 @@
 	<div class="breadcrumb-wrap">
 		<div class="container">
 			<ol class="breadcrumb">
-			  <li><a href="#">My Events</a></li>
+			  <li><a href="my-event.html">My Events</a></li>
 			  <li class="breadcrumb-event-name"><a href="#">Event Name</a></li>
 			  <li class="active">Dashboard</li>
 			</ol>
@@ -33,52 +33,52 @@
 		<!-- Dashboard panel -->
 
 		<div class="row">
-			<div class="col-sm-3">
+			<div class="col-sm-6 col-md-3">
 				<div class="panel panel-dashboard pd-green-turquoise">
 					<div class="row">
-						<div class="col-sm-4 pd-icon">
+						<div class="col-xs-4 pd-icon">
 							<i class="fa fa-eye"></i>
 						</div>
-						<div class="col-sm-8 pd-body">
+						<div class="col-xs-8 pd-body">
 							<span class="pd-title">Page Views</span>
 							<span class="pd-counter">350k</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-6 col-md-3">
 				<div class="panel panel-dashboard pd-red-aliarin">
 					<div class="row">
-						<div class="col-sm-4 pd-icon">
+						<div class="col-xs-4 pd-icon">
 							<i class="fa fa-user"></i>
 						</div>
-						<div class="col-sm-8 pd-body">
+						<div class="col-xs-8 pd-body">
 							<span class="pd-title">Visitor</span>
 							<span class="pd-counter">140k</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-6 col-md-3">
 				<div class="panel panel-dashboard pd-yellow-sandstorm">
 					<div class="row">
-						<div class="col-sm-4 pd-icon">
+						<div class="col-xs-4 pd-icon">
 							<i class="fa fa-credit-card"></i>
 						</div>
-						<div class="col-sm-8 pd-body">
+						<div class="col-xs-8 pd-body">
 							<span class="pd-title">Order</span>
 							<span class="pd-counter">12k</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-6 col-md-3">
 				<div class="panel panel-dashboard pd-blue-picton">
 					<div class="row">
-						<div class="col-sm-4 pd-icon">
+						<div class="col-xs-4 pd-icon">
 							<i class="fa fa-ticket"></i>
 						</div>
-						<div class="col-sm-8 pd-body">
+						<div class="col-xs-8 pd-body">
 							<span class="pd-title">Ticket</span>
 							<span class="pd-counter">2k</span>
 						</div>
@@ -92,13 +92,19 @@
 			<div class="col-sm-8">
 				<div class="panel panel-default" id="panel-dashboard-chart">
 					<div class="panel-heading">
-						<span class="panel-title" style="display: inline-block; margin-top: 8px;">Summary Graph</span>
-						<div class="form-inline pull-right">
-							Period
-							<input type="text" id="datepicker" class="form-control">
-							to
-							<input type="text" class="form-control">
-							<button type="buttom" class="btn btn-default">Go</button>
+						<div class="row">
+							<div class="col-xs-12 col-lg-4">
+								<span class="panel-title" style="display: inline-block; margin-top: 8px;">Summary Graph</span>
+							</div>
+							<div class="col-xs-12  col-lg-8">
+								<div class="form-inline pd-period-wrap">
+									Period
+									<input type="text" id="datepicker" class="form-control">
+									to
+									<input type="text" class="form-control">
+									<button type="buttom" class="btn btn-default">Go</button>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="panel-body">
@@ -116,7 +122,7 @@
 			</div><!-- end of Dashboard line chart -->
 
 			<div class="col-sm-4">
-				<div class="panel panel-dashboard pd-green-turquoise">
+				{# <div class="panel panel-dashboard pd-green-turquoise">
 					<div class="row">
 						<div class="col-sm-4 pd-icon">
 							<i class="fa fa-rocket"></i>
@@ -130,7 +136,7 @@
 							<span class="pd-counter">N/A</span>
 						</div>
 					</div>
-				</div>
+				</div> #}
 				<div class="panel panel-dashboard pd-red-aliarin" id="panel-dashboard-income">
 					<div class="panel-body">
 						<div class="text-center">

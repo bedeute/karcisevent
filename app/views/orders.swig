@@ -13,7 +13,7 @@
 	<div class="breadcrumb-wrap">
 		<div class="container">
 			<ol class="breadcrumb">
-			  <li><a href="#">My Events</a></li>
+			  <li><a href="my-event.html">My Events</a></li>
 			  <li class="breadcrumb-event-name"><a href="dashboard.html">Event Name</a></li>
 			  <li class="active">Orders</li>
 			</ol>
@@ -36,6 +36,7 @@
 				<div class="panel-heading">
 					<div class="pull-right">
 						<ul class="list-inline">
+							<li><a href="order-detail.html" class="btn btn-xs btn-default"><i class="fa fa-plus"></i>&nbsp;Add order (Manually)</a></li>
 							<li class="dropdown">
 							  <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="ticketFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 							    Filter
@@ -67,7 +68,7 @@
 						<tbody>
 							<tr>
 								<td>
-									<a href="#">#invoice01</a>
+									<a href="order-detail.html">#invoice01</a>
 									<ul class="list-inline visible-xs">
 										<li><strong>Buyer Name</strong></li>
 										<li>2</li>
@@ -85,7 +86,7 @@
 							</tr>
 									<tr>
 								<td>
-									<a href="#">#invoice02</a>
+									<a href="order-detail.html">#invoice02</a>
 									<ul class="list-inline visible-xs">
 										<li><strong>Buyer Name 2</strong></li>
 										<li>2</li>
@@ -103,7 +104,7 @@
 							</tr>
 									<tr>
 								<td>
-									<a href="#">#invoice03</a>
+									<a href="order-detail.html">#invoice03</a>
 									<ul class="list-inline visible-xs">
 										<li><strong>Buyer Name 03</strong></li>
 										<li>1</li>

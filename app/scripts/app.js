@@ -70,7 +70,7 @@
 
   // tooltip trigger
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[rel="tooltip"]').tooltip()
   });
 
 
@@ -93,9 +93,11 @@
   // Sidebar show hide behavior
   $('.btn-header-dashboard').click(function(e){
     e.stopPropagation();
+    e.preventDefault();
     var $sidebar = $('.sidebar-dashboard');
     var $header = $('.header.header-dashboard');
     var $headerSearch = $('.header-search-wrap');
+    var $footer = $('.dashboard-footer');
 
     if ($sidebar.hasClass('reveal')) {
       $sidebar.removeClass('reveal');
@@ -104,6 +106,7 @@
       $header.addClass('widened');
       $headerSearch.removeClass('narrowed');
       $headerSearch.addClass('widened');
+      $footer.removeClass('narrowed');
     } else{
       $sidebar.removeClass('shrink');
       $sidebar.addClass('reveal');
@@ -111,12 +114,61 @@
       $header.addClass('narrowed');
       $headerSearch.removeClass('widened');
       $headerSearch.addClass('narrowed');
+      $footer.addClass('narrowed');
     };
   });
 
   // chosen trigger
   $(".chosen-select").chosen({disable_search_threshold: 10});
 
+
+  // Sidebar behavior when width of screen changes
+  //the function to hide the div
+  function sidebarShrink(){
+      if ($(window).width() < 768) {
+        // if ($('.sidebar-dashboard').hasClass('reveal')) {
+        //   $(this).removeClass('reveal');
+        //   $(this).addClass('shrink');
+        // };
+        $('.sidebar-dashboard').removeClass('reveal').addClass('shrink');
+        $('.header-dashboard').removeClass('narrowed').addClass('widened');
+      };
+  };
+
+  //run on document load and on window resize
+  $(document).ready(function () {
+      //on load
+      sidebarShrink();
+      //on resize
+      $(window).resize(function(){
+          sidebarShrink();
+      });
+  });
+
+  // signup step (for mockup)
+  $(document).ready(function(){
+    $('a[data-step="sp-next"]').click(function(e){
+      e.stopPropagation();
+      e.preventDefault();
+      $(this).closest('.sp-panel').addClass('hidden').next().removeClass('hidden');
+    });
+    $('a[data-step="sp-back"]').click(function(e){
+      e.stopPropagation();
+      e.preventDefault();
+      $(this).closest('.sp-panel').addClass('hidden').prev().removeClass('hidden');
+    })
+    
+  })
+
+
+  // Hide show at create ticket page (additional option)
+  $(function() {
+    $('#ct-additional-option-item').hide();
+
+    $('#ct-additional-option-toggle').change(function() {
+      $('#ct-additional-option-item').slideToggle();
+    })
+  })
 
   // modal step
   // $(document).ready(function(){

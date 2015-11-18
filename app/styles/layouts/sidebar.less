@@ -13,12 +13,16 @@
 		.transition(width 0.16s ease-in-out);
 
 		+ .main-content {
-			margin-left: @sidebar-width;
+			margin-left: 0;
+
+			@media (min-width: @screen-sm-min) {
+				margin-left: @sidebar-width;
+			}
 		}
 	}
 
 	&.shrink {
-		width: @sidebar-width-shrink;
+		left: -@sidebar-width;
 		.transition(width 0.16s ease-in-out);
 
 		> .sidebar-dashboard-header {
@@ -27,12 +31,11 @@
 				.transition(all 0.16s ease-in-out);
 
 				&, &:focus{
-					right: auto;
-					left: 52px;
+					background-color: rgba(255, 255, 255, 0.5);
+					right: -50px;
 					color: @sidebar-bg-color;
 					.box-shadow(none);
 					border-color: transparent;
-					background-color: inherit;
 					border-radius: 2px;
 				}
 
@@ -41,45 +44,45 @@
 				}
 			}
 
-			> .navbar-brand {
-				> span {
-					display: none;
-				}
-			}
+			// > .navbar-brand {
+			// 	> span {
+			// 		display: none;
+			// 	}
+			// }
 		}
 
-		> .sidebar-nav {
+		// > .sidebar-nav {
 
-			> li {
-				position: relative;
-				> a {
-					> i {
-						vertical-align: middle;
-						font-size: 20px;
-						margin-left: 1px;
-					}
-					> span {
-						display: none;
-						vertical-align: middle;
-						position: absolute;
-						top: 0;
-						padding:11px 15px;
-						left: 52px;
-						background-color: @sidebar-bg-color;
-					}
+		// 	> li {
+		// 		position: relative;
+		// 		> a {
+		// 			> i {
+		// 				vertical-align: middle;
+		// 				font-size: 20px;
+		// 				margin-left: 1px;
+		// 			}
+		// 			> span {
+		// 				display: none;
+		// 				vertical-align: middle;
+		// 				position: absolute;
+		// 				top: 0;
+		// 				padding:11px 15px;
+		// 				left: 52px;
+		// 				background-color: @sidebar-bg-color;
+		// 			}
 
-					&:hover {
-						> span {	
-							.transition(all 0.4s ease-in-out);
-							display: block;
-						}
-					}
-				}
-			}
-		}
+		// 			&:hover {
+		// 				> span {	
+		// 					.transition(all 0.4s ease-in-out);
+		// 					display: block;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		+ .main-content {
-			margin-left: @sidebar-width-shrink;
+			margin-left: 0;
 		}
 	}
 

@@ -13,9 +13,10 @@
 	<div class="breadcrumb-wrap">
 		<div class="container">
 			<ol class="breadcrumb">
-			  <li><a href="#">My Events</a></li>
+			  <li><a href="my-event.html">My Events</a></li>
 			  <li class="breadcrumb-event-name"><a href="dashboard.html">Event Name</a></li>
-			  <li class="active">Event Detail</li>
+			  <li><a href="#">Event Detail</a></li>
+			  <li class="active">Create Event</li>
 			</ol>
 			<div class="pull-right">
 				<a href="preview-event.html" class="breadcrumb-btn-preview"><i class="fa fa-external-link-square"></i>&nbsp;Preview</a>

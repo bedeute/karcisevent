@@ -1,0 +1,32 @@
+.ke-nav-tabs {
+
+	> li {
+
+			
+			&.active > a,
+			&.active > a:hover,
+			&.active > a:focus {
+				@media (min-width: @screen-sm) {
+					border: none !important;
+					border-bottom: 1px solid @brand-main !important;
+					.box-shadow(inset 0 -2px @brand-main);
+				}
+			}
+
+		> a {
+
+			@media (min-width: @screen-sm) {
+				border: none;
+				border-bottom: 1px solid @brand-main !important;
+			}
+
+			&:hover,
+			&:focus {
+				@media (min-width: @screen-sm) {
+					background-color: transparent;
+					.box-shadow(inset 0 -2px @brand-main);
+				}
+			}
+		}
+	}
+}

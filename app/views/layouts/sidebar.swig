@@ -1,12 +1,6 @@
 <div class="sidebar-dashboard reveal">
 	<div class="sidebar-dashboard-header clearfix">
 	  <a href="#" class="btn btn-header-dashboard"><i class="fa fa-bars"></i></a>
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
     <a class="navbar-brand" href="#">
     	<img src="images/karcisevent-logo-white.png" alt="karcis event logo" title="karcis event logo" height="22" class="pull-left">&nbsp;
     	<span>

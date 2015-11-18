@@ -12,12 +12,14 @@
 <section id="my-event-page">
 	<!-- breadcrumb -->
 	<div class="breadcrumb-wrap">
-		<ol class="breadcrumb">
-		  <li>My Events</li>
-		</ol>
-		<div class="pull-right">
-			<span>Last viewed event</span>&nbsp;
-			<a href="#">Event Name</a>
+		<div class="container">
+			<ol class="breadcrumb">
+			  <li>My Events</li>
+			</ol>
+			<div class="pull-right">
+				<span>Last viewed event</span>&nbsp;
+				<a href="#">Event Name</a>
+			</div>
 		</div>
 	</div><!-- end of breadcrumb -->
 

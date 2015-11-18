@@ -30,7 +30,7 @@
 	
 		<section id="account-page">
 			<div class="row">
-				<div class="col-sm-4 col-sm-offset-4">
+				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<div class="pull-right">
