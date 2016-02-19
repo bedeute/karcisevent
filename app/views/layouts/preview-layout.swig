@@ -22,7 +22,6 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-  {% endblock %}
 
   <!-- @if NODE_ENV == 'DEVELOPMENT' -->
   <link rel="stylesheet" href="styles/app.css">
@@ -35,6 +34,7 @@
   <link rel="stylesheet" href="styles/app.min.css">
   <script src="scripts/head.all.min.js"></script>
   <!-- @endif -->
+  {% endblock %}
 </head>
 
 <body>
@@ -63,6 +63,7 @@
     </footer>
   {% endblock %}
 
+  {% block bottom_script %}
   <!-- @if NODE_ENV == 'DEVELOPMENT' -->
   <!--app:js-->
   <!--/app:js-->
@@ -71,6 +72,7 @@
   <!-- @if NODE_ENV == 'DISTRIBUTION' -->
   <script src="scripts/app.all.min.js"></script>
   <!-- @endif -->
+  {% endblock %}
 </body>
 
 </html>

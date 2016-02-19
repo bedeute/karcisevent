@@ -23,7 +23,8 @@
     "chosen": "~1.4.2",
     "bootstrap-chosen": "~1.0.1",
     "awesome-bootstrap-checkbox": "~0.3.5",
-    "bootstrap-toggle": "~2.2.1"
+    "bootstrap-toggle": "~2.2.1",
+    "tipsy-jmalonzo": "^1.0.1"
   },
   "overrides": {}
 }

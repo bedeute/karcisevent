@@ -1,0 +1,258 @@
+// @import (reference) "../app";
+
+@import "../../../bower_components/bootstrap/less/normalize.less";
+@import "../../../bower_components/bootstrap/less/print.less"; 
+@import "../../../bower_components/bootstrap/less/type.less"; 
+@import "../../../bower_components/bootstrap/less/code.less"; 
+@import "../../../bower_components/bootstrap/less/tables.less"; 
+@import "../../../bower_components/bootstrap/less/forms.less"; 
+@import "../../../bower_components/bootstrap/less/scaffolding.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/variables.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/mixins.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/grid.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/buttons.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/component-animations.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/glyphicons.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/dropdowns.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/button-groups.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/input-groups.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/navs.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/navbar.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/breadcrumbs.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/pagination.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/pager.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/labels.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/badges.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/jumbotron.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/thumbnails.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/alerts.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/progress-bars.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/media.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/list-group.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/panels.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/wells.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/close.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/modals.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/tooltip.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/popovers.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/carousel.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/utilities.less"; 
+@import (reference) "../../../bower_components/bootstrap/less/responsive-utilities.less";
+// @import (less) 'https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic';
+@import '../../fonts/Droid-Serif/css/fonts';
+@import '../../fonts/PT-Sans/css/fonts';
+@import 'variables';
+@import 'mixins';
+@import '../components/button-restyle';;
+@import (reference) "base";
+@import (less) "fontello/fontello.css";
+@import (less) "../../../bower_components/tipsy-jmalonzo/src/stylesheets/tipsy.css"; 
+
+// helper classes
+.visible-xs {
+	.visible-xs();
+}
+.hidden-xs {
+	.hidden-xs();
+}
+
+.pull-right {
+	.pull-right();
+}
+
+.list-inline {
+	.list-inline();
+	margin-bottom: 0;
+}
+
+
+
+body {
+	background-color: #f5f5f5;
+	font-family: @pt-sans-font-family;
+}
+
+.ke-container {
+	.container();
+}
+
+
+
+.ke-widget {
+
+}
+
+.ke-panel {
+	.panel()
+}
+
+.ke-panel-default {
+	.panel-default();
+}
+
+.ke-panel-heading {
+	.panel-heading();
+	border-bottom: 1px solid #ddd;
+}
+
+.ke-panel-footer {
+	.panel-footer();
+	.clearfix();
+}
+
+.ke-panel-title {
+	.panel-title();
+}
+
+.powered-wrap {
+	color: #bbb;
+
+	a {
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+
+			> .powered-icon {
+				background-position: 0 -23px;
+				.opacity(1);
+			}
+
+			> .powered-name {
+				color: @brand-main;
+			}
+		}
+
+		> span {
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		> .powered-icon {
+			display: inline-block;
+			height: 22px;
+			width: 26px;
+			vertical-align: middle;
+			background-size: 100%;
+			background-image: url(../images/karcis-event-logo-dark.png);
+			.opacity(0.7);
+			.transition(background-position 0.08s ease-in-out);
+		}
+
+		> .powered-name {
+			color: #aaa;
+		}
+	}
+}
+
+.ke-table {
+	.table();
+	margin-bottom: 0;
+
+	> thead > tr > th,
+	> tbody > tr > th,
+	> tfoot > tr > th,
+	> thead > tr > td,
+	> tbody > tr > td,
+	> tfoot > tr > td {
+		&:first-child{
+			padding-left: 16px;
+		}
+
+		&:last-child {
+			padding-right: 16px;
+		}
+	}
+
+	> thead	> tr > th {
+		&:last-child{
+			text-align: right;
+		}
+	}
+
+	> tbody > tr > td {
+		vertical-align: middle;
+
+		&:last-child{
+			text-align: right;
+
+			input {
+				display: inline-block;
+				padding-right: 6px;
+			}
+		}
+	}
+
+	&-striped {
+		.table-striped()
+	}
+}
+
+.ke-ticket-name {
+	margin: 4px 0;
+}
+
+.ke-ticket-description {
+	display: inline-block;
+	margin-bottom: 4px;
+}
+
+.ke-ticket-list-responsive {
+
+	> li {
+
+		&:first-child > span {
+			margin-top: 0;
+		}
+
+		span {
+			display: inline-block;
+			background-color: #f3f3f3;
+			border: 1px solid #eee;
+			border-radius: 12px;
+			margin: 4px 0;
+			padding: 1px 4px;
+			font-size: 12px;
+		}
+	}
+}
+
+#promo-code-wrap {
+	float: left;
+
+	#promoCode {
+		padding: 7px 0 4px;
+		display: inline-block;
+		color: #999;
+
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:hover {
+			color: @brand-main;
+			text-decoration: none;
+		}
+	}
+
+	#promoCodeInput {
+		display: inline-block;
+		width: auto;
+
+		&.hidden {
+			display: none;
+		}
+
+		&.reveal {
+			display: inline-block;
+		}
+	}
+}
+
+.bttn {
+	.btn();
+}
+
+.bttn-main {
+	.btn-main();
+}

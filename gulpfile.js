@@ -42,6 +42,11 @@ opts.src = {
       'bower_components/bootstrap-toggle/js/bootstrap-toggle.js',
       'bower_components/dropzone/dist/dropzone.js',
       'app/scripts/app.js'
+    ],
+    keScripts: [
+      'bower_components/jquery/dist/jquery.js',
+      'bower_components/tipsy-jmalonzo/src/javascripts/jquery.tipsy.js',
+      'app/scripts/keScripts.js'
     ]
   },
   fonts: [
@@ -116,6 +121,12 @@ opts.inject = {
     endtag: '<!--/app:js-->',
     relative: true,
     ignorePath: '../'
+  },
+  keScripts: {
+    starttag: '<!--keScripts:js-->',
+    endtag: '<!--/keScripts:js-->',
+    relative: true,
+    ignorePath: '../'
   }
 };
 
@@ -145,7 +156,8 @@ opts.autoprefixer = {
 
 opts.concat = {
   head: 'head.all.min.js',
-  app: 'app.all.min.js'
+  app: 'app.all.min.js',
+  keScripts: 'keScripts.all.min.js'
 };
 
 opts.uglify = { preserveComments: 'some' };
@@ -199,6 +211,9 @@ gulp.task('views', function () {
     .pipe($.inject(gulp.src(opts.src.scripts.app, {read: false}),
       opts.inject.app
     ))
+    .pipe($.inject(gulp.src(opts.src.scripts.keScripts, {read: false}),
+      opts.inject.keScripts
+    ))
     .pipe(gulp.dest(opts.dest.views))
     .pipe($.sync.reload({ stream: true }));
 });
@@ -226,6 +241,22 @@ gulp.task('styles',  function() {
     .pipe($.sync.reload({ stream: true }));
 });
 
+gulp.task('styles-custom',  function() {
+  return gulp.src('app/styles/helpers/ke-widget-style.less')
+    .pipe($.newer('.tmp/styles/'))
+    .pipe($.plumber(opts.notify.styles))
+    .pipe($.less())
+    
+    .pipe($.autoprefixer(opts.autoprefixer))
+    .pipe($.csscomb())
+    .pipe(gulp.dest('.tmp/styles/'))
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', $.postcss([ $.mqpacker ])))
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', $.rename(opts.rename)))
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', $.minifyCss()))
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', gulp.dest('.tmp/styles/')))
+    .pipe($.sync.reload({ stream: true }));
+});
+
 
 /*
  * Scripts
@@ -247,7 +278,12 @@ gulp.task('scripts', function () {
     .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', $.uglify(opts.uglify)))
     .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', gulp.dest(opts.dest.scripts)));
 
-  return $.merge(dev, head, app);
+  var keScripts = gulp.src(opts.src.scripts.keScripts)
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', $.concat(opts.concat.keScripts)))
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', $.uglify(opts.uglify)))
+    .pipe($.if(process.env.NODE_ENV === 'DISTRIBUTION', gulp.dest(opts.dest.scripts)));
+
+  return $.merge(dev, head, app, keScripts);
 });
 
 
@@ -297,13 +333,18 @@ gulp.task('copy', function () {
     .pipe(gulp.dest(opts.dest.copy));
 });
 
+gulp.task('copy-custom', function () {
+  return gulp.src('app/styles/helpers/ke-widget-style')
+    .pipe(gulp.dest(opts.dest.copy));
+});
+
 
 /*
  * Main tasks
  */
 
 gulp.task('default', ['clean'], function (cb) {
-  $.run(['data', 'sprite', 'scripts'], ['views', 'styles', 'images', 'fonts'], cb);
+  $.run(['data', 'sprite', 'scripts'], ['views', 'styles', 'images', 'fonts'], 'styles-custom', cb);
 });
 
 gulp.task('dist', ['clean'], function (cb) {
@@ -338,7 +379,7 @@ gulp.task('serve', ['default'], function () {
   });
 
   $.watch(opts.src.watch.styles, function () {
-    $.run('styles');
+    $.run('styles', 'styles-custom');
   });
 
   $.watch(opts.src.watch.views, function () {

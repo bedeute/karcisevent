@@ -1,0 +1,4 @@
+
+.ic-power:before { content: '\e800'; } /* '' */
+.ic-tag:before { content: '\e803'; } /* '' */
+.ic-dollar:before { content: '\e804'; } /* '' */
